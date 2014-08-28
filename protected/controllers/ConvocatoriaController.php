@@ -5,6 +5,25 @@ class ConvocatoriaController extends Controller
 	public $layout = 'bootstrap';
 	public $defaultAction = 'terminos';
 
+	public function filters()
+	{
+		return array(
+			'accessControl',
+			);
+	}
+
+	public function accessRules()
+    {
+        return array(
+            array('allow',
+                'actions'=>array('index'),
+                'users'=>array('*')
+            )
+        );
+    }
+
+
+
 	public function actionIndex()
 	{
 		$this->layout = 'home';

@@ -3,6 +3,7 @@
 class PropuestasController extends Controller
 {
 	public $layout = 'admin';
+	//public $layout = 'bootstrap';
 	public $user;
 	
 	public function actionDetalle()
@@ -57,10 +58,15 @@ class PropuestasController extends Controller
 			$usuario = $objUsuario->findByPk($idSesion);
 			$this->user = $usuario;
 
-			$model = new Propuestas("search");
+
+			if(isset($_GET['Propuestas']))
+				print_r($_GET['Propuestas']);
+		/*	$model = new Propuestas("search");
 			$model->unsetAttributes();
 			if(isset($_GET['Propuestas']))
 				$model->attributes = $_GET['Propuestas'];
+*/
+			$model = new Propuestas();
 
 			$criteria=new CDbCriteria;
 			$criteria->compare('nombre',$model->nombre,true);
@@ -69,11 +75,25 @@ class PropuestasController extends Controller
 				$criteria->addCondition("jurado_id=".$usuario->jurados[0]->id);	
 			}
 
-			$dataProvider = new CActiveDataProvider($model, array(
+		/*	$dataProvider = new CActiveDataProvider($model, array(
    				'criteria'=>$criteria,
     			'sort'=>array('defaultOrder'=>'id ASC'), // orden por defecto según el atributo nombre
     			'pagination'=>array('pageSize'=>20), // personalizamos la paginación
-  			));			
+  			));		*/
+
+		$dataProvider = new CActiveDataProvider('Propuestas', array(
+			'criteria'=>array(
+				'condition'=>'estado=1',
+				'order'=>'nombre ASC'
+				),
+
+    			'sort'=>array('defaultOrder'=>'nombre ASC'), // orden por defecto según el atributo nombre
+    			'pagination'=>array('pageSize'=>20), // personalizamos la paginación
+  		));	
+
+
+
+
 		}
 		else{
 			$this->redirect(array('site/login'));

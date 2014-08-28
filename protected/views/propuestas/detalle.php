@@ -8,102 +8,114 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
   <div class="row-fluid">
     <div class="span8">
       <div class="row-fluid">
-        <div class="span4">
-          <?php 
-            if( !empty($perfil->fotoses) ):
-              foreach($perfil->fotoses as $foto): ?>
-              <?php if( $foto->es_perfil): ?>
-                <img src="<?php echo $foto->src ?>" width="210" height="210" alt="<?php echo $perfil->nombre ?>" />
-              <?php endif ?>
-          <?php 
-              endforeach; 
-            else:
-          ?>
-              <img src="/files/default.jpg" width="210" height="210" alt="<?php echo $perfil->nombre ?>" />
-        <?php endif; ?>
+        <div id="foto-perfil" class="span6">
+            <?php 
+              if( !empty($perfil->fotoses) ):
+                foreach($perfil->fotoses as $foto): ?>
+                <?php if( $foto->es_perfil): ?>
+                  <img src="<?php echo $foto->src ?>" width="210" height="210" alt="<?php echo $perfil->nombre ?>" />
+                <?php endif ?>
+            <?php 
+                endforeach; 
+              else:
+            ?>
+                <img src="/files/default.jpg" width="210" height="210" alt="<?php echo $perfil->nombre ?>" />
+          <?php endif; ?>
         </div><!--/span-->
-        <div class="span6">
-          <h3><?php echo $perfil->propuestases[0]->nombre ?></h3><br/>
-          <strong>Área:</strong> <?php echo $perfil->areas->nombre ?><br/><br/>
-          <strong>Número Integrantes:</strong> <?php echo $perfil->propuestases[0]->numero_integrantes ?><br/><br/>
-          <strong>Trayectoria:</strong> 
-          <?php 
-          switch ($perfil->propuestases[0]->trayectoria ) {
-          	case '1':
-          		echo "De 1 a 5 Años";
-          		break;
-          	case '2':
-          		echo "De 5 a 10 Años";
-          		break;
-          	default:
-          		echo "De 10 Años en adelante";
-          		break;
-          }
-          ?><br/><br/>
-          <strong>Valor Presentación:</strong> <?php echo number_format($perfil->propuestases[0]->valor_presentacion,0) ?>
+        <div class="span4">
+            <h3><?php echo $perfil->propuestases[0]->nombre ?></h3><br/>
+            <strong>Subgénero:</strong> <?php echo $perfil->propuestases[0]->subgenero ?><br/><br/>
+            <strong>Número Integrantes:</strong> <?php echo $perfil->propuestases[0]->numero_integrantes ?><br/><br/>
+            <strong>Trayectoria:</strong> 
+            <?php 
+            switch ($perfil->propuestases[0]->trayectoria ) {
+            	case '1':
+            		echo "De 1 a 5 Años";
+            		break;
+            	case '2':
+            		echo "De 5 a 10 Años";
+            		break;
+            	default:
+            		echo "De 10 Años en adelante";
+            		break;
+            }
+            ?><br/><br/>
+         <!--   <strong>Valor Presentación:</strong> <?php //echo number_format($perfil->propuestases[0]->valor_presentacion,0) ?> -->
+           <strong>Dirección:</strong> <?php echo $perfil->propuestases[0]->direccion ?><br/><br/>
+           <strong>Facebook:</strong> <?php echo Yii::app()->format->formatUrl($perfil->redesHasPerfiles[1]->url) ?><br/><br/>
+           <strong>Twitter:</strong> <?php echo Yii::app()->format->formatUrl($perfil->redesHasPerfiles[0]->url) ?><br/><br/>
+           <strong>Sitio Web:</strong> <?php if( !empty($perfil->web) ):?><?php echo Yii::app()->format->formatUrl($perfil->web) ?><?php endif; ?><br/><br/>
         </div><!--/span-->
       </div><!--/row-->
+
+
       <div class="row-fluid">
-        <div class="span5">
+        <div class="span12">
+            <h3 class="tituloBackground">representante</h3>
+        </div>
+        <div class="span4">
           <br/>
           <strong>Representante:</strong> <?php echo $perfil->propuestases[0]->representante ?><br/><br/>
           <strong>Cédula:</strong> <?php echo $perfil->propuestases[0]->cedula ?><br/><br/>
           <strong>Email:</strong> <?php echo $perfil->propuestases[0]->email ?><br/><br/>
           <strong>Celular:</strong> <?php echo $perfil->propuestases[0]->celular ?><br/><br/>
           <strong>Teléfono:</strong> <?php echo $perfil->propuestases[0]->telefono ?><br/><br/>
-        </div><!--/span-->
-        <div class="span4">
-		  <br/>
-		  <strong>Dirección:</strong> <?php echo $perfil->propuestases[0]->direccion ?><br/><br/>
-		  <strong>Facebook:</strong> <?php echo Yii::app()->format->formatUrl($perfil->redesHasPerfiles[1]->url) ?><br/><br/>
-		  <strong>Twitter:</strong> <?php echo Yii::app()->format->formatUrl($perfil->redesHasPerfiles[0]->url) ?><br/><br/>
-		  <strong>Sitio Web:</strong> <?php if( !empty($perfil->web) ):?><?php echo Yii::app()->format->formatUrl($perfil->web) ?><?php endif; ?><br/><br/>
-        </div><!--/span-->        
+        </div><!--/span-->      
       </div><!--/row-->
+
       <div class="row-fluid">
-      	<div class="span9">
-      		<h5>Reseña</h5>
-      		<?php echo $perfil->propuestases[0]->resena ?>
+      	<div class="span12">
+          <h3 class="tituloBackground">Reseña</h3>
+      		<p class="res"> <?php echo $perfil->propuestases[0]->resena ?> </p>
       	</div>
-      </div>      
+      </div>   
+
       <div class="row-fluid">
-      	<div class="span5">
-      		<h5>Video</h5>
-      		<?php
-			$url = $perfil->propuestases[0]->video;
-			preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $url, $matches);
-			if(isset($matches[1])):
-			?> 
-			<iframe type="text/html" width="350" height="200" src="http://www.youtube.com/embed/<?php echo $matches[1] ?>?rel=0" frameborder="0"></iframe>		
-			<?php endif; ?>
+      	<div class="span12">
+      		 <h3 class="tituloBackground">Video</h3>
+          		<?php
+    			       $url = $perfil->propuestases[0]->video;
+    			       preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $url, $matches);
+    			       if(isset($matches[1])):
+    		    	   ?> 
+    			          <iframe type="text/html" width="563" height="300" src="http://www.youtube.com/embed/<?php echo $matches[1] ?>?rel=0" frameborder="0"></iframe>		
+    			       <?php endif; ?>
       	</div>
+
       	<?php if($perfil->areas_id === "1"): ?>
-      	<div class="span4">
-      		<h5>Audios</h5>
-      		<?php foreach($perfil->audioses as $audio): ?>
-      		<h6><?php echo $audio->nombre ?>.mp3</h6>
-			<audio controls>
-			  <source src="<?php echo Yii::app()->request->baseUrl.$audio->url ?>" type="audio/mpeg">
-			  Su Navegador no soporta reproducción de audio. Actualicelo o descargue el archivo a su computado 
-			  [<a href="<?php echo Yii::app()->request->baseUrl.$audio->url ?>" target="_BLANK">Descargar</a>]
-			</audio>         		
-      		<?php endforeach; ?> 		
-      	</div>
+
+        	<div class="row-fluid">
+            <div class="span12">
+            		<h3 class="tituloBackground">Audios</h3>
+            		<?php foreach($perfil->audioses as $audio): ?>
+            		      <h6><?php echo $audio->nombre ?>.mp3</h6>
+                			<audio controls>
+                			  <source src="<?php echo Yii::app()->request->baseUrl.$audio->url ?>" type="audio/mpeg">
+                			  Su Navegador no soporta reproducción de audio. Actualicelo o descargue el archivo a su computado 
+                			  [<a href="<?php echo Yii::app()->request->baseUrl.$audio->url ?>" target="_BLANK">Descargar</a>]
+                			</audio>         		
+            		<?php endforeach; ?>
+            </div> 		
+        	</div>
+
       	<?php endif; ?>
       </div>
+
       <div class="row-fluid">
-        <div class="span9">
-          <h3>Galería de la propuesta</h3>
-          <?php 
-          if( !empty($perfil->fotoses) ):
-            foreach($perfil->fotoses as $foto): ?>
-            <?php if( !$foto->es_perfil): ?>
-              <a href="<?php echo $foto->src ?>" class="fancybox" rel="group" title="<?php echo $perfil->nombre ?>"><img src="<?php echo $foto->src ?>" width="140" height="117" alt="<?php echo $perfil->nombre ?>" class="img-rounded" /></a>
-            <?php endif ?>
-        <?php 
-            endforeach;
-          endif; 
-        ?>
+        <div class="span12">
+            <h3 class="tituloBackground">Galería de la propuesta</h3>
+            <div id="galeria">
+                <?php 
+                  if( !empty($perfil->fotoses) ):
+                    foreach($perfil->fotoses as $foto): ?>
+                    <?php if( !$foto->es_perfil): ?>
+                      <a href="<?php echo $foto->src ?>" class="fancybox" rel="group" title="<?php echo $perfil->nombre ?>"><img src="<?php echo $foto->src ?>" width="140" height="117" alt="<?php echo $perfil->nombre ?>" class="img-rounded" /></a>
+                    <?php endif ?>
+                <?php 
+                      endforeach;
+                  endif; 
+                  ?>
+            </div>
         </div>
       </div>            
     </div><!--/span-->  	

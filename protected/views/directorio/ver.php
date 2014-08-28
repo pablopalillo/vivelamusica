@@ -133,6 +133,12 @@ $this->pageTitle = Yii::app()->name . ' - ' .$perfil->nombre;
 			endforeach;
 		endif; 
 	?>
+	<div class="row-fluid">
+  	<div class="span12">
+  		<h5>Rider Técnico</h5>
+  		<embed src="<?php echo Yii::app()->request->baseUrl.$perfil->propuestases[0]->rider ?>" toolbar="0" width="100%" height="550">
+  	</div>
+  </div>  
 	<h3 class="tituloBackground">Contactar propuesta</h3>
 
 	<?php if( Yii::app()->user->hasFlash('success') ):?>

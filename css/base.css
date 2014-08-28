@@ -635,15 +635,15 @@ background:#74A5D6;
 
 
 
-
-
 /*DIRECTORIO*/
+.infoPpal{
+  height: 350px;
+}
 
 .infoPpal img
 {
   float: left;
   margin:0 10px 10px 0;
-
 }
 
 .infoPpal .categoria {

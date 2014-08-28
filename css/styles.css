@@ -64,6 +64,55 @@
 	width: 120px;
 }
 
+.nav-collapse ul li span {
+   color: #999999;
+   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+   padding: 10px 15px;
+   display: block;
+}
+
+#admin-header h4
+{
+   color: rgba(123, 123, 123, 1);
+   font-size: 20px;
+}
+
+.table .even
+{
+	background-color: rgba(17, 153, 221, 0.11);
+}
+
+
+.tituloBackground {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #ccc;
+    clear: both;
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    overflow: hidden;
+    padding: 2px 5px 2px 15px;
+    text-transform: uppercase;
+}
+
+.res
+{
+	text-align: justify;
+	line-height: 18px;
+
+}
+
+#foto-perfil{
+	margin-top: 30px;
+}
+
+#galeria{
+	background-color: #f5f5f5;
+	padding: 20px; 
+}
+
 .ui-autocomplete {
     max-height: 100px;
     overflow-y: auto;

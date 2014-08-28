@@ -72,6 +72,7 @@ class SiteController extends Controller
 						break;
 					case ('2' OR '3'): 
 						$this->redirect(array('propuestas/listar'));
+						//$this->redirect(array('/directorio'));
 						break;
 					default:
 						$this->redirect(array('site/login'));

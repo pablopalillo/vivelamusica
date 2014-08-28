@@ -9,6 +9,7 @@
     <meta name="author" content="telemedellín">
     
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
     <!--[if LTE IE 8]>
       <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" />
@@ -24,7 +25,7 @@
 
       @media (max-width: 980px) {
         /* Enable use of floated navbar text */
-        .navbar-text.pull-right {
+       .navbar-text.pull-right {
           float: none;
           padding-left: 5px;
           padding-right: 5px;
@@ -34,26 +35,32 @@
     <title><?php echo CHtml::encode($this->pageTitle); ?></title>
   </head>
   <body>
- <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <?php echo CHtml::link('Feria de las Flores', array('propuestas/listar'), array("class"=>"brand")) ?>
-          <div class="nav-collapse collapse">
-            <ul class="nav pull-right">
-              <li class="active"><a href="#"><?php echo $this->user->username ?></a></li>
-              <li class="divider"></li>
-              <li><?php echo CHtml::link('Salir', array('site/logout')) ?></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
+   <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="span12">
+
+        <div class="nav-collapse collapse">
+          <ul class="nav pull-left">
+            <li class="active"><span><?php echo Yii::app()->name /*echo CHtml::link( Yii::app()->name , array('propuestas/listar'), array("class"=>"brand"))*/ ?> </span></li>
+          </ul>
+
+          <ul class="nav pull-right">
+            <li class="active"><span><?php echo $this->user->username ?></span></li>
+            <li class="divider"></li>
+            <li><?php echo CHtml::link('Salir', array('site/logout')) ?></li>
+          </ul>
+
+        </div><!--/.nav-collapse -->
+
+
       </div>
     </div>
+  </div>
+
+    <div class="span11">
       <?php echo $content ?>
+    </div>
+    
   </body>
   <?php Yii::app()->clientScript->registerScriptFile("http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js", CClientScript::POS_HEAD) ?>    
   <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . "/js/bootstrap.js", CClientScript::POS_END) ?>      
