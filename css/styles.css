@@ -119,6 +119,20 @@
     /* prevent horizontal scrollbar */
     overflow-x: hidden;
   }
+
+  #backarr{
+  	width: 60px;
+  	height: 60px;
+  }
+
+  #backarr figure{
+  	background: url('../images/home60.png');
+  	background-repeat: no-repeat; 
+  	width: 30px;
+  	height: 30px;
+  	margin:0;
+  	padding: 0;
+  }
   /* IE 6 doesn't support max-height
    * we use height instead, but this forces the menu to always be this tall
    */

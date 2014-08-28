@@ -6,7 +6,7 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
 ?>
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span8">
+    <div class="span12">
       <div class="row-fluid">
         <div id="foto-perfil" class="span6">
             <?php 
@@ -78,7 +78,7 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
     			       preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $url, $matches);
     			       if(isset($matches[1])):
     		    	   ?> 
-    			          <iframe type="text/html" width="563" height="300" src="http://www.youtube.com/embed/<?php echo $matches[1] ?>?rel=0" frameborder="0"></iframe>		
+    			          <iframe type="text/html" width="840" height="400" src="http://www.youtube.com/embed/<?php echo $matches[1] ?>?rel=0" frameborder="0"></iframe>		
     			       <?php endif; ?>
       	</div>
 
@@ -119,7 +119,7 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
         </div>
       </div>            
     </div><!--/span-->  	
-    <div class="span4">
+<!--    <div class="span4">
       <div class="well sidebar-nav" id="calificador">
         <?php if($this->user->roles_id == "2"): ?>
           <?php if ($estaCalificada): ?>
@@ -145,7 +145,6 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
           <?php endif; ?>
         <?php else: ?>
           <?php if ($estaCalificada): ?>
-          <!-- LA PROPUESTA ESTA CALIFICADA -->
         <ul class="nav nav-list calificador">          
           <?php $idCriterioActual = 0; ?>
           <?php $i=0; foreach($criterios as $criterio): ?>    
@@ -162,7 +161,6 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
           <li><button id="btnCalificar" class="btn btn-info centrar">Calificar</button></li>         
         </ul>          
           <?php else: ?>
-          <!-- LA PROPUESTA NO ESTA CALIFICADA -->
         <ul class="nav nav-list calificador">          
           <?php $idCriterioActual = 0; ?>
           <?php foreach($criterios as $criterio): ?>    
@@ -193,10 +191,10 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
         </ul>  
           <?php endif; ?>      
         <?php endif; ?>
-      </div><!--/.well -->
-    </div><!--/span-->
-  </div><!--/row-->
-
+      </div>
+    </div>
+  </div>
+-->
   <div class="row-fluid">
   	<div class="span12">
   		<h5>Rider Técnico</h5>

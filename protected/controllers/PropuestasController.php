@@ -59,8 +59,8 @@ class PropuestasController extends Controller
 			$this->user = $usuario;
 
 
-			if(isset($_GET['Propuestas']))
-				print_r($_GET['Propuestas']);
+		//	if(isset($_GET['Propuestas']))
+			//	print_r($_GET['Propuestas']);
 		/*	$model = new Propuestas("search");
 			$model->unsetAttributes();
 			if(isset($_GET['Propuestas']))

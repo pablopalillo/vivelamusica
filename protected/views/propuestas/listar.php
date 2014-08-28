@@ -6,17 +6,17 @@
     </div>
     <div class="span12">
     <?php
-     $this->widget('zii.widgets.grid.CGridView', array(
+   $this->widget('zii.widgets.grid.CGridView', array(
          'dataProvider'=>$model->search(),
          'filter'=>$model,
          'columns'=>array(
               array(
                 'name' => 'nombre',
-                'filter' => '<input type="text" name="nombre" maxlength="100" placeholder="Filtar por nombre" style="width: 200px"/>',
+                 'value' => 'CHtml::encode($data->nombre)',
               ),
               array(
-                'name' => 'jurado.nombre_completo',
-                'filter' => false, // para que no se muestre el campo de filtrar para el atributo direccion
+                'name' => 'subgenero',
+                'value' => 'CHtml::encode($data->subgenero)',
               ),          
               array(
                   'class' => 'CButtonColumn',
@@ -34,6 +34,7 @@
          'summaryText'=>'',
          'itemsCssClass'=>'table table-bordered table-hover',
      ));
+
     ?>
     </div>
 </div>

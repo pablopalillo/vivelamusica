@@ -132,31 +132,32 @@ class Propuestas extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+	//	$criteria->compare('id',$this->id);
 		$criteria->compare('nombre',$this->nombre,true);
-		$criteria->compare('representante',$this->representante,true);
-		$criteria->compare('cedula',$this->cedula,true);
-		$criteria->compare('telefono',$this->telefono,true);
-		$criteria->compare('celular',$this->celular,true);
-		$criteria->compare('email',$this->email,true);
-		$criteria->compare('direccion',$this->direccion,true);
-		$criteria->compare('trayectoria',$this->trayectoria);
-		$criteria->compare('numero_integrantes',$this->numero_integrantes);
-		$criteria->compare('resena',$this->resena,true);
-		$criteria->compare('video',$this->video,true);
-		$criteria->compare('estado',$this->estado);
-		$criteria->compare('valor_presentacion',$this->valor_presentacion);
-		$criteria->compare('rider',$this->rider,true);
-		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('updated_at',$this->updated_at,true);
-		$criteria->compare('convocatorias_id',$this->convocatorias_id);
-		$criteria->compare('perfiles_id',$this->perfiles_id);
+	//	$criteria->compare('representante',$this->representante,true);
+	//	$criteria->compare('cedula',$this->cedula,true);
+	//	$criteria->compare('telefono',$this->telefono,true);
+//		$criteria->compare('celular',$this->celular,true);
+//		$criteria->compare('email',$this->email,true);
+//		$criteria->compare('direccion',$this->direccion,true);
+//		$criteria->compare('trayectoria',$this->trayectoria);
+//		$criteria->compare('numero_integrantes',$this->numero_integrantes);
+//		$criteria->compare('resena',$this->resena,true);
+//		$criteria->compare('video',$this->video,true);
+//		$criteria->compare('estado',$this->estado);
+//		$criteria->compare('valor_presentacion',$this->valor_presentacion);
+	//	$criteria->compare('rider',$this->rider,true);
+	//	$criteria->compare('created_at',$this->created_at,true);
+//		$criteria->compare('updated_at',$this->updated_at,true);
+//		$criteria->compare('convocatorias_id',$this->convocatorias_id);
+//		$criteria->compare('perfiles_id',$this->perfiles_id);
 		$criteria->compare('subgenero',$this->subgenero,true);
-		$criteria->compare('jurado_id',$this->jurado_id);
+//		$criteria->compare('jurado_id',$this->jurado_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+
 	}
 
 	protected function beforeSave(){

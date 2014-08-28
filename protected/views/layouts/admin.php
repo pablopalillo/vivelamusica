@@ -41,6 +41,7 @@
 
         <div class="nav-collapse collapse">
           <ul class="nav pull-left">
+            <li><span> <a href="<?php echo Yii::app()->request->baseUrl; ?>/propuestas/listar" id="backarr" title="Home"> <figure> </figure> </a> </span></li>
             <li class="active"><span><?php echo Yii::app()->name /*echo CHtml::link( Yii::app()->name , array('propuestas/listar'), array("class"=>"brand"))*/ ?> </span></li>
           </ul>
 
