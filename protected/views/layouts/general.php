@@ -37,7 +37,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . "/js
           <div class="fechas">
             <div class="item-fecha">
               <span class="tit-fechas"> INICIO INSCRIPCIÓN </span class="tit-fechas">
-              <span class="tex-fechas">29 de agosto<span>
+              <span class="tex-fechas">1 de septiembre<span>
             </div>
             <div class="item-fecha">
               <span class="tit-fechas"> FINALIZACIÓN INSCRIPCIÓN  </span class="tit-fechas">
