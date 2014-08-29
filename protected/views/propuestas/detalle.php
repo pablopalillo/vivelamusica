@@ -22,7 +22,7 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
                 <img src="/files/default.jpg" width="210" height="210" alt="<?php echo $perfil->nombre ?>" />
           <?php endif; ?>
         </div><!--/span-->
-        <div class="span4">
+        <div id="info-basica" class="span6">
             <h3><?php echo $perfil->propuestases[0]->nombre ?></h3><br/>
             <strong>Subgénero:</strong> <?php echo $perfil->propuestases[0]->subgenero ?><br/><br/>
             <strong>Número Integrantes:</strong> <?php echo $perfil->propuestases[0]->numero_integrantes ?><br/><br/>

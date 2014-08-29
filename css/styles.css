@@ -104,10 +104,6 @@
 
 }
 
-#foto-perfil{
-	margin-top: 30px;
-}
-
 #galeria{
 	background-color: #f5f5f5;
 	padding: 20px; 
@@ -133,6 +129,28 @@
   	margin:0;
   	padding: 0;
   }
+
+  #foto-perfil{
+  	margin-top: 20px;
+  	background: none repeat scroll 0 0 #fff;
+    border: 5px solid rgba(177, 177, 177, 1);
+    border-radius: 12px;
+    box-shadow: 0 1px 1px rgba(136, 153, 166, 0.15);
+    height: auto;
+    width: auto;
+  }
+
+  #foto-perfil img {
+    -moz-force-broken-image-icon: 1;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+  }
+
+  #info-basica{
+  	padding-left: 50px;
+  }
+
   /* IE 6 doesn't support max-height
    * we use height instead, but this forces the menu to always be this tall
    */
