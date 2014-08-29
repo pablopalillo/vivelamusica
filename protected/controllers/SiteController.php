@@ -2,7 +2,7 @@
 
 class SiteController extends Controller
 {
-	public $layout = 'bootstrap';
+	public $layout = 'general';
 	public $user;
 	/**
 	 * Declares class-based actions.

@@ -2,7 +2,7 @@
 
 class ConvocatoriaController extends Controller
 {
-	public $layout = 'bootstrap';
+	public $layout = 'general';
 	public $defaultAction = 'terminos';
 
 	public function filters()
@@ -21,8 +21,6 @@ class ConvocatoriaController extends Controller
             )
         );
     }
-
-
 
 	public function actionIndex()
 	{

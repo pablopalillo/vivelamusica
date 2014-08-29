@@ -21,13 +21,11 @@ footer{
   z-index: 2;
 }
 header{
-  background: url(../images/flor_sup.png) no-repeat, url(../images/bg_header.png) no-repeat 420px 19px;
   height: 330px;
   margin: auto;
   /*margin-bottom: -180px;*/
   position: relative;
   width: 1050px;
-  z-index: 2;
 }
 header h1{
   float: left;
@@ -40,23 +38,10 @@ header .logos{
   text-align: right;
   width: 585px;
 }
+
 header .galleta{
   margin-left: -80px;
 }
-header .fechas{
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: #ccc 1px 1px 10px;
-  clear: both;
-  color: #929292;
-  font-size: 13px;
-  margin: auto;
-  overflow: hidden;
-  width: 810px;
-  cursor: default;
-}
-
-
 
 nav {
   background-color: #FFF;
@@ -111,19 +96,6 @@ nav ul li > ul > li a {
 	
 }
 
-nav ul li a:hover,
-nav ul li.active a,
-a.flecha-abajo:hover,
-a.flecha-derecha:hover {
-    background-color: #c42d45;
-	color:#FFF;
-	text-decoration:none;
-	border-radius: 5px;
-}
-
-
-
-
 
 
 nav ul li ul {
@@ -168,7 +140,6 @@ nav ul li ul li ul {
 }
 
 header .fechas div{
-  background: url(../images/dot-col.png) no-repeat right center;
   float: left;
   padding: 10px 0;
   text-align: center;
@@ -557,15 +528,6 @@ background:#74A5D6;
   margin: 30px 0;
 }
 
-#fucking-flor{
-  background: url(../images/flor_inf.png) no-repeat;
-  bottom: -40px;
-  display: block;
-  height: 200px;
-  position: absolute;
-  right: -100px;
-  width: 200px;
-}
 
 /* Main marketing message and sign up button */
 .jumbotron {

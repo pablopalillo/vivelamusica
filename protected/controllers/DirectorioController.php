@@ -2,7 +2,7 @@
 
 class DirectorioController extends Controller
 {
-	public $layout = 'bootstrap';
+	public $layout = 'general';
 
 	
 	public function filters()
