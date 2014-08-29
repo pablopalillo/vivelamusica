@@ -25,29 +25,31 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . "/js
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/base.css" />  
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
     <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    <link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
 
   </head>
   <body>
       <header>
-        <h1>
-           Medellín vive la mùsica        
-        </h1>
-        <div class="fechas">
-          <div class="item-fecha">
-            <strong> INICIO INSCRIPCIÓN </strong>
-            <span>29 de agosto<span>
+        <div class="contenedor-header">
+          <h1>
+             Medellín vive la mùsica        
+          </h1>
+          <div class="fechas">
+            <div class="item-fecha">
+              <span class="tit-fechas"> INICIO INSCRIPCIÓN </span class="tit-fechas">
+              <span class="tex-fechas">29 de agosto<span>
+            </div>
+            <div class="item-fecha">
+              <span class="tit-fechas"> FINALIZACIÓN INSCRIPCIÓN  </span class="tit-fechas">
+              <span class="tex-fechas">12 de septiembre</span>
+            </div>
+            <div class="item-fecha">
+               <span class="tit-fechas"> RESULTADOS  </span class="tit-fechas">
+              <span class="tex-fechas">16 de septiembre</span>
+            </div>
           </div>
-          <div class="item-fecha">
-            <strong> FINALIZACIÓN INSCRIPCIÓN  </strong>
-            <span>12 de septiembre</span>
-           
-          </div>
-          <div class="item-fecha">
-             <strong> RESULTADOS  </strong>
-            <span>16 de septiembre</span>
-          </div>
+          <h2> INSCRIPCIÓN ARTISTAS</h2>
         </div>
-        <h2> INSCRIPCIÓN ARTISTAS</h2>
       </header>
 
       <div class="container">
@@ -55,11 +57,13 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . "/js
       </div>
 
       <footer>
-        <ul class="icon-area">
-          <li> <a src="#">SIATA SUCKS </a>  </li>
-          <li> <a src="#">SIATA SUCKS </a> </li>
-          <li> <a src="#">SIATA SUCKS </a> </li>
-        </ul>
+        <div class="content">
+          <ul class="logos-patrocinadores">
+            <li> <a src="#" class="fondo-med">Fondo Medellín ciudad para la vida</a>  </li>
+            <li> <a src="#" class="alcaldia">Alcaldía de Medellín</a> </li>
+            <li> <a src="#" class="med-musica">Medellín vive la música</a> </li>
+          </ul>
+        </div>
       </footer>
 
       <input type="hidden" value="<?php echo Yii::app()->request->baseUrl ?>" id="PUBLIC_PATH"/>

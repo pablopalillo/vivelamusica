@@ -1,8 +1,7 @@
 body {
-  background: 
-    url(../images/pattern_inf.jpg) repeat-x,  
-    url(../images/bg_flores.png) repeat;
-    color: #777;
+  background: url(../images/fondo.jpg) #000000 no-repeat center top;
+  background-size: contain;
+  color: #777;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   height: 100%;
@@ -14,23 +13,67 @@ a{
   color: #E73F56;
 }
 footer{
-  background: url(../images/pattern_inf.jpg) repeat-x bottom;
+  background: #fff;
   bottom: 0;
-  height: 20px;
   width: 100%;
   z-index: 2;
+  overflow: auto;
+  padding: 15px 0;
+  margin: 0;
+}
+footer .content{
+  width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+footer .content ul{
+  margin: 0
+}
+footer .content ul li {
+  list-style: none;
+  display: inline-block;
+}
+footer a{
+  height: 94px;
+  text-indent: -9999px;
+  display: block;
+}
+footer a.fondo-med{
+  background: url(../images/logo-fondo-medellin.png) no-repeat center top;
+  width: 121px;
+}
+footer a.alcaldia{
+  background: url(../images/logos-alcaldia.png) no-repeat center top;
+  width: 172px;
+}
+footer a.med-musica{
+  background: url(../images/logo-footer.png) no-repeat center top;
+  width: 153px;
 }
 header{
-  height: 330px;
+  height: auto;
   margin: auto;
   /*margin-bottom: -180px;*/
   position: relative;
-  width: 1050px;
+  width: 100%;
 }
+.contenedor-header h2{
+  clear: both;
+  width: 760px;
+  margin: 20px auto;
+  font-size: 5em;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  color: #BC0831;
+}
+
 header h1{
-  float: left;
-  margin: 10px 0 10px 240px;
-  width: 220px;
+  background: url(../images/logo-header.png) rgba(0, 0, 0, 0.5) no-repeat center;
+  width: 100%;
+  height: 220px;
+  margin: 15px auto;
+  text-indent: -9999px;
+
 }
 header .logos{
   background: url(../images/header_logos.png) no-repeat left 20px;
@@ -138,18 +181,37 @@ nav ul li ul li ul {
     right: 0px;
     top: 0px;
 }
-
+.fechas{
+  width: 760px;
+  margin: 0 auto;
+  overflow: auto;
+  font-family: 'Anton', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+.item-fecha{
+  background: #0BAAAD;
+  margin: 0 7px;
+}
+.tex-fechas{
+  font-size: 1.3em;
+}
 header .fechas div{
   float: left;
   padding: 10px 0;
   text-align: center;
-  width: 33%;
+  width: 30%;
 }
-header .fechas div:last-child{
+/*header .fechas div:last-child{
   background: 0;
+}*/
+.tit-fechas{
+  display: block;
+  font-size: 1.6em;
+  margin: 0 0 10px 0;
 }
 header .fechas strong{
-  -webkit-border-bottom-right-radius: 10px;
+  /*-webkit-border-bottom-right-radius: 10px;
   -webkit-border-bottom-left-radius: 10px;
   -moz-border-radius-bottomright: 10px;
   -moz-border-radius-bottomleft: 10px;
@@ -162,7 +224,7 @@ header .fechas strong{
   margin: 0 3%;
   padding: 7px 0; 
   position: absolute;
-  width: 20%;
+  width: 20%;*/
 }
 header .fechas strong.current{
   background: #9ec065;
