@@ -136,8 +136,7 @@
     border: 5px solid rgba(177, 177, 177, 1);
     border-radius: 12px;
     box-shadow: 0 1px 1px rgba(136, 153, 166, 0.15);
-    height: auto;
-    width: auto;
+    max-width: 317px;
   }
 
   #foto-perfil img {
@@ -150,6 +149,16 @@
   #info-basica{
   	padding-left: 50px;
   }
+
+.subtitle1{
+    width: 170px;
+    float: left;
+ }
+
+.subtitle2{
+    width: 140px;
+    float: left;
+ }
 
   /* IE 6 doesn't support max-height
    * we use height instead, but this forces the menu to always be this tall

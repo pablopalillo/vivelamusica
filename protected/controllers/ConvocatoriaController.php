@@ -226,6 +226,8 @@ class ConvocatoriaController extends Controller
 				$objPerfiles->usuarios_id = $idUsuario;
 				//$objPerfiles->areas_id    = $objFormularioRegistro->area;
 				$objPerfiles->areas_id    = 1;
+				$objFormularioRegistro->twitter = $_POST['RegistroForm']['twitter'];
+				$objFormularioRegistro->fb 		= $_POST['RegistroForm']['fb'];
 
 				if( ! $objPerfiles->save(false)){
 					$transaction->rollback();
@@ -235,7 +237,7 @@ class ConvocatoriaController extends Controller
 				$objRedesHasPerfil = new RedesHasPerfiles();
 				$objRedesHasPerfil->redes_id = 1;
 				$objRedesHasPerfil->perfiles_id = $idPerfil;
-				$objRedesHasPerfil->url = $objFormularioRegistro->twitter;
+				$objRedesHasPerfil->url = $_POST['RegistroForm']['twitter'];
 				if( ! $objRedesHasPerfil->save(false)){
 					$transaction->rollback();	
 				}
@@ -243,7 +245,7 @@ class ConvocatoriaController extends Controller
 				$objRedesHasPerfil = new RedesHasPerfiles();
 				$objRedesHasPerfil->redes_id = 2;
 				$objRedesHasPerfil->perfiles_id = $idPerfil;
-				$objRedesHasPerfil->url = $objFormularioRegistro->fb;				
+				$objRedesHasPerfil->url = $_POST['RegistroForm']['fb'];				
 				if( ! $objRedesHasPerfil->save(false)){
 					$transaction->rollback();	
 				}
@@ -470,7 +472,7 @@ class ConvocatoriaController extends Controller
 	}	
 */
 	public function actionGenerarPassword(){
-		echo Bcrypt::check("CNBDGFAA");
+		echo Bcrypt::hash("00unQgcB");
 	}
 
 	// Uncomment the following methods and override them if needed

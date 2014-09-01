@@ -3,7 +3,7 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->request->baseUrl.'/css/jqu
 ?>
 <div class="row-fluid">
 	<div class="span12">
-		<h2>Inscripción de Artistas para Programación de la Feria de las Flores</h2>
+		<h2>Inscripción de Artistas para Festival Medellín vive la música</h2>
 		<!--<p>
 			Los campos con el ícono <i class="icon-privado"></i> no son visibles al público, sólo serán tenidos en cuenta internamente para el proceso de selección, evaluación y contacto
 		</p> -->			

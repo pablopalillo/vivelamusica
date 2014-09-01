@@ -24,9 +24,9 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
         </div><!--/span-->
         <div id="info-basica" class="span6">
             <h3><?php echo $perfil->propuestases[0]->nombre ?></h3><br/>
-            <strong>Subgénero:</strong> <?php echo $perfil->propuestases[0]->subgenero ?><br/><br/>
-            <strong>Número Integrantes:</strong> <?php echo $perfil->propuestases[0]->numero_integrantes ?><br/><br/>
-            <strong>Trayectoria:</strong> 
+            <strong class="subtitle1">Subgénero:</strong> <?php echo $perfil->propuestases[0]->subgenero ?><br/><br/>
+            <strong class="subtitle1">Número Integrantes:</strong> <?php echo $perfil->propuestases[0]->numero_integrantes ?><br/><br/>
+            <strong class="subtitle1">Trayectoria:</strong> 
             <?php 
             switch ($perfil->propuestases[0]->trayectoria ) {
             	case '1':
@@ -41,10 +41,9 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
             }
             ?><br/><br/>
          <!--   <strong>Valor Presentación:</strong> <?php //echo number_format($perfil->propuestases[0]->valor_presentacion,0) ?> -->
-           <strong>Dirección:</strong> <?php echo $perfil->propuestases[0]->direccion ?><br/><br/>
-           <strong>Facebook:</strong> <?php echo Yii::app()->format->formatUrl($perfil->redesHasPerfiles[1]->url) ?><br/><br/>
-           <strong>Twitter:</strong> <?php echo Yii::app()->format->formatUrl($perfil->redesHasPerfiles[0]->url) ?><br/><br/>
-           <strong>Sitio Web:</strong> <?php if( !empty($perfil->web) ):?><?php echo Yii::app()->format->formatUrl($perfil->web) ?><?php endif; ?><br/><br/>
+           <strong class="subtitle1">Facebook:</strong> <?php echo Yii::app()->format->formatUrl($perfil->redesHasPerfiles[1]->url) ?><br/><br/>
+           <strong class="subtitle1">Twitter:</strong> <?php echo Yii::app()->format->formatUrl($perfil->redesHasPerfiles[0]->url) ?><br/><br/>
+           <strong class="subtitle1">Sitio Web:</strong> <?php if( !empty($perfil->web) ):?><?php echo Yii::app()->format->formatUrl($perfil->web) ?><?php endif; ?><br/><br/>
         </div><!--/span-->
       </div><!--/row-->
 
@@ -53,14 +52,16 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
         <div class="span12">
             <h3 class="tituloBackground">representante</h3>
         </div>
-        <div class="span4">
-          <br/>
-          <strong>Representante:</strong> <?php echo $perfil->propuestases[0]->representante ?><br/><br/>
-          <strong>Cédula:</strong> <?php echo $perfil->propuestases[0]->cedula ?><br/><br/>
-          <strong>Email:</strong> <?php echo $perfil->propuestases[0]->email ?><br/><br/>
-          <strong>Celular:</strong> <?php echo $perfil->propuestases[0]->celular ?><br/><br/>
-          <strong>Teléfono:</strong> <?php echo $perfil->propuestases[0]->telefono ?><br/><br/>
-        </div><!--/span-->      
+        <div class="span5">
+          <strong class="subtitle2">Representante:</strong> <?php echo $perfil->propuestases[0]->representante ?><br/><br/>
+          <strong class="subtitle2">Cédula:</strong> <?php echo $perfil->propuestases[0]->cedula ?><br/><br/>
+          <strong class="subtitle2">Teléfono:</strong> <?php echo $perfil->propuestases[0]->telefono ?><br/><br/>
+        </div>
+        <div class="span5">
+          <strong class="subtitle2">Email:</strong> <?php echo $perfil->propuestases[0]->email ?><br/><br/>
+          <strong class="subtitle2">Celular:</strong> <?php echo $perfil->propuestases[0]->celular ?><br/><br/>
+          <strong class="subtitle2">Dirección:</strong> <?php echo $perfil->propuestases[0]->direccion ?><br/><br/>
+        </span>
       </div><!--/row-->
 
       <div class="row-fluid">
@@ -88,12 +89,16 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
             <div class="span12">
             		<h3 class="tituloBackground">Audios</h3>
             		<?php foreach($perfil->audioses as $audio): ?>
-            		      <h6><?php echo $audio->nombre ?>.mp3</h6>
-                			<audio controls>
-                			  <source src="<?php echo Yii::app()->request->baseUrl.$audio->url ?>" type="audio/mpeg">
-                			  Su Navegador no soporta reproducción de audio. Actualicelo o descargue el archivo a su computado 
-                			  [<a href="<?php echo Yii::app()->request->baseUrl.$audio->url ?>" target="_BLANK">Descargar</a>]
-                			</audio>         		
+
+                      <div class="span5">
+            		        <h6><?php echo $audio->nombre ?>.mp3</h6>
+                  			<audio controls>
+                  			  <source src="<?php echo Yii::app()->request->baseUrl.$audio->url ?>" type="audio/mpeg">
+                  			  Su Navegador no soporta reproducción de audio. Actualicelo o descargue el archivo a su computado 
+                  			  [<a href="<?php echo Yii::app()->request->baseUrl.$audio->url ?>" target="_BLANK">Descargar</a>]
+                  			</audio>         		
+                      </div>  
+
             		<?php endforeach; ?>
             </div> 		
         	</div>

@@ -9,8 +9,8 @@
 			que harán parte de la programación oficial del evento.
 		</p>
 		<p>
-			Los interesados deben inscribirse en la página <a href="http://www.festivalmedellínvivelamúsica.com" target="_blank"> www.festivalmedellínvivelamúsica.com </a>,
-			diligenciando un Formulario en Línea al que podrán acceder desde el ícono que se encuentra al final de esta página.
+			Los interesados deben inscribirse diligenciando un formulario en línea al que podrán acceder desde el botón que se encuentra
+			al final de esta página.
 		</p>
 
 		<h4>Condiciones de participación </h4>
@@ -31,7 +31,7 @@
 			</li>
 			<li>
 				<p> Las inscripciones se abrirán el <strong>29 de agosto y se cerrarán el 12 de septiembre a las 6:00 p.m.</strong> Solo se recibirán propuestas por este medio. 
-				</p>
+				</p>http://alpha.telemedellin.tv/clima24-7/paginaweb/suroriente.jpg
 			</li>
 			<li>
 				<p>
