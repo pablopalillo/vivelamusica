@@ -24,7 +24,7 @@ Yii::app()->clientScript->registerScript('fancybox', '$(".fancybox").fancybox();
         </div><!--/span-->
         <div id="info-basica" class="span6">
             <h3><?php echo $perfil->propuestases[0]->nombre ?></h3><br/>
-            <strong class="subtitle1">Subgénero:</strong> <?php echo $perfil->propuestases[0]->subgenero ?><br/><br/>
+            <strong class="subtitle1">Subgénero:</strong> <span> <?php echo $perfil->propuestases[0]->subgenero ?></span> <br/><br/>
             <strong class="subtitle1">Número Integrantes:</strong> <?php echo $perfil->propuestases[0]->numero_integrantes ?><br/><br/>
             <strong class="subtitle1">Trayectoria:</strong> 
             <?php 
