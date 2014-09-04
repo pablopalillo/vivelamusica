@@ -31,7 +31,7 @@
 			</li>
 			<li>
 				<p> Las inscripciones se abrirán el <strong>29 de agosto y se cerrarán el 12 de septiembre a las 6:00 p.m.</strong> Solo se recibirán propuestas por este medio. 
-				</p>http://alpha.telemedellin.tv/clima24-7/paginaweb/suroriente.jpg
+				</p>
 			</li>
 			<li>
 				<p>
@@ -43,13 +43,12 @@
 			<li>
 				<p>
 				El resultado con las 12 propuestas escogidas para la programación, se publicará el día <strong> 16 de septiembre de 2014</strong>, 
-				en la página web del Festival Medellín Vive la Música <a href='http://www.medellinvivelamúsica.com/festival' target="_blank" > www.medellinvivelamúsica.com/festival </a>
-				y en la dirección <a href='http://www.festivalmedellinvivelamusica.com' target="_blank">www.festivalmedellinvivelamusica.com</a> 
+				en la página web del Festival Medellín Vive la Música <a href='http://www.festivalmedellinvivelamusica.com' target="_blank">www.festivalmedellinvivelamusica.com</a> 
 				</p>
 			</li>
 			<li>
 				<p>
-				Antes de diligenciar el formulario es muy importante que <strong>lea detalladamente las instrucciones</strong>, las podrá consultar desde el botón ubicado en la parte inferior de esta página. 
+				Antes de diligenciar el formulario es muy importante que <strong>lea detalladamente las instrucciones en esta página y acepte los términos y condiciones</strong>, las podrá consultar desde el botón ubicado en la parte inferior de esta página. 
 				También podrá acceder a estas desde un ícono ubicado en la parte superior del formulario de inscripción. 
 				</p>
 			</li>

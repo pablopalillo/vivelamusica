@@ -16,11 +16,13 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->request->baseUrl . "/js
 <!DOCTYPE html>
 <html lang="es">
   <head>
-
+    <title>Invitación para artistas al Festival Medellín Vive la música</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1024">
+    <meta name="title" content="Invitación para artistas al Festival Medellín Vive la música">
     <meta name="description" content="La Alcaldía de Medellín, invita a los artistas, entidades y agrupaciones locales a inscribir sus propuestas en el proceso de selección para la programación del Festival Medellín Vive la Música.">
     <meta name="author" content="telemedellín">
+    <meta property="og:image" content="http://festivalmedellinvivelamusica.com/images/logo-header.png" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/base.css" />  
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
